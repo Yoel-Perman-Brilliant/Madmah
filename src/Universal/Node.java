@@ -32,4 +32,15 @@ public class Node<T> {
     public boolean hasNext(){
         return this.next != null;
     }
+
+    public String toString(){
+        Node<T> p = this;
+        String output = "[";
+        while (p!=null){
+            output = output + p.getValue() + ",";
+            p = p.getNext();
+        }
+        output = output.substring(0, output.length()-1) + "]";
+        return output;
+    }
 }
