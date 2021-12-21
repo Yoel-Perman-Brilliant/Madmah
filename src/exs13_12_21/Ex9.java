@@ -1,6 +1,6 @@
-package Exs13_12_21;
+package exs13_12_21;
 
-import Universal.*;
+import universal.*;
 
 public class Ex9 {
     private static Stack<Integer> generateReverse(Stack<Integer> stack) {

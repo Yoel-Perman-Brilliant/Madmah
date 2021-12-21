@@ -1,12 +1,6 @@
-package Universal;
+package universal;
 
 public class Stack<T> {
-
-    public static class StackUnderflowException extends Exception{
-        public StackUnderflowException(){
-            super("StackUnderflowException");
-        }
-    }
 
     private Node<T> head;
 
@@ -14,7 +8,7 @@ public class Stack<T> {
         this.head = null;
     }
 
-    public T top(){
+    public T top() {
         return this.head.getValue();
     }
 

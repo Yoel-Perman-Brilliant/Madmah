@@ -1,4 +1,4 @@
-package Universal;
+package universal;
 
 public class Node<T> {
     private T value;
@@ -29,18 +29,18 @@ public class Node<T> {
         this.next = next;
     }
 
-    public boolean hasNext(){
+    public boolean hasNext() {
         return this.next != null;
     }
 
-    public String toString(){
+    public String toString() {
         Node<T> p = this;
         String output = "[";
-        while (p!=null){
+        while (p != null) {
             output = output + p.getValue() + ",";
             p = p.getNext();
         }
-        output = output.substring(0, output.length()-1) + "]";
+        output = output.substring(0, output.length() - 1) + "]";
         return output;
     }
 }

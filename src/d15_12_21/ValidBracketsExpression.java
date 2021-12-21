@@ -1,6 +1,6 @@
-package D15_12_21;
+package d15_12_21;
 
-import Universal.*;
+import universal.*;
 
 import java.util.Scanner;
 

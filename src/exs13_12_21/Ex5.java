@@ -1,5 +1,5 @@
-package Exs13_12_21;
-import Universal.*;
+package exs13_12_21;
+import universal.*;
 
 public class Ex5 {
     public static Stack<Integer> lengths(Stack<String> stack){
