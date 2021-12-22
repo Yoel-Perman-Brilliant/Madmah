@@ -1,7 +1,5 @@
 package page133;
 
-import universal.LinkedListUtil;
-import universal.Node;
 import universal.Stack;
 
 public class Ex17 {

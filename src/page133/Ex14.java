@@ -1,4 +1,5 @@
 package page133;
+
 import universal.*;
 
 import javax.swing.*;
@@ -19,25 +20,25 @@ public class Ex14 {
         return temp1;
 
     }
-    private static boolean isSubstack(Stack<Integer> stack, Stack<Integer> substack){
+
+    private static boolean isSubstack(Stack<Integer> stack, Stack<Integer> substack) {
         Integer x;
         Stack<Integer> result = new Stack<>();
         Stack<Integer> reverse = generateReverse(substack);
         Stack<Integer> substackCopy = generateReverse(reverse);
         Stack<Integer> stackCopy = generateReverse(generateReverse(stack));
         if (substackCopy.isEmpty()) return true;
-        while(!substackCopy.isEmpty()) {
-            if(stackCopy.isEmpty()) return false;
+        while (!substackCopy.isEmpty()) {
+            if (stackCopy.isEmpty()) return false;
             if (substackCopy.top() != stackCopy.top()) {
                 x = stackCopy.pop();
-            }
-            else{
-                x=stackCopy.pop();
+            } else {
+                x = stackCopy.pop();
                 result.push(substackCopy.pop());
             }
         }
-        while(!result.isEmpty() && !reverse.isEmpty()){
-            if (result.pop() != reverse.pop()){
+        while (!result.isEmpty() && !reverse.isEmpty()) {
+            if (result.pop() != reverse.pop()) {
                 return false;
             }
         }
@@ -45,20 +46,23 @@ public class Ex14 {
             return false;
         return true;
     }
-    private static Stack<Integer> digitStack(Integer num){
+
+    private static Stack<Integer> digitStack(Integer num) {
         Stack<Integer> output = new Stack<>();
-        while(num!=0){
-            output.push(Math.abs(num%10));
-            num/=10;
+        while (num != 0) {
+            output.push(Math.abs(num % 10));
+            num /= 10;
         }
         return output;
     }
-    public static boolean areDigitsSubstack(Integer num, Stack<Integer> stack){
+
+    public static boolean areDigitsSubstack(Integer num, Stack<Integer> stack) {
         Stack<Integer> digit_stack = digitStack(num);
         Stack<Integer> inverse = generateReverse(digitStack(num));
         return (isSubstack(stack, digit_stack) || isSubstack(stack, inverse));
     }
-    public static void main(String[] args){
+
+    public static void main(String[] args) {
         Stack<Integer> stack1 = new Stack<>();
         stack1.push(1);
         stack1.push(2);
