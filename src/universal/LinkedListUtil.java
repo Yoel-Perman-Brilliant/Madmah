@@ -21,13 +21,13 @@ public class LinkedListUtil<T> {
         }
     }
 
-    public Node<T> listFromArray(T[] arr) {
-        Node<T> pos;
+    public static Node listFromArray(Object[] arr) {
+        Node pos;
         for (int i = 0; i < arr.length; i++) {
-            pos = new Node<T>(arr[i]);
+            pos = new Node(arr[i]);
             instance.insert(pos);
         }
-        Node<T> output = instance.list;
+        Node output = instance.list;
         instance.list = null;
         return output;
     }
