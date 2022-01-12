@@ -1,7 +1,7 @@
 package exs13_12_21;
 import universal.*;
 
-public class Ex5 {
+public class    Ex5 {
     public static Stack<Integer> lengths(Stack<String> stack){
         Stack<String> temp = new Stack<String>();
         Stack<Integer> output = new Stack<Integer>();

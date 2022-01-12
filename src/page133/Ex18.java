@@ -3,27 +3,7 @@ package page133;
 import universal.Stack;
 
 public class Ex18 {
-    private static class Couple {
-        private double num;
-        private int appears;
-
-        public Couple(double num, int appears) {
-            this.num = num;
-            this.appears = appears;
-        }
-
-        public Couple(double[] arr) {
-            this(arr[0], (int)arr[1]);
-        }
-
-        public double getNum() {
-            return num;
-        }
-        public int getAppears(){
-            return appears;
-        }
-    }
-    public static Stack<Double> sort(Stack<Double>stack){
+    public static Stack<Double> sort(Stack<Double> stack){
         Stack<Double> tempStack = new Stack<>();
         Double x;
         while(!stack.isEmpty()){
@@ -59,4 +39,3 @@ public class Ex18 {
         System.out.println(newStack(stack));
     }
 }
-
