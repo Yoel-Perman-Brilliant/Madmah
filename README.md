@@ -1,2 +1,2 @@
-#Homework 12.1.22:
-Page 26 exs. 1,3,7,9
+A repository for Yoel Perman Brilliant's Computer Science exercises.
+This is it really.
