@@ -5,4 +5,8 @@ This is it really.
 </p>
 
 #Homework
-page 28 exs. 28, 29, 33
+page 98 exs 43-46
+
+#Current Ex
+
+
