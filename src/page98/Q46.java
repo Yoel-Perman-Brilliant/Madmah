@@ -2,6 +2,8 @@ package page98;
 
 import universal.Node;
 
+
+//not checked yet
 public class Q46 {
     public static int lengthDifference(Node<Integer> list1, Node<Integer> list2) {
         if (list1 == null && list2 == null)
