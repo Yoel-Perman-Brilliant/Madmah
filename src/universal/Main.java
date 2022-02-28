@@ -1,16 +1,14 @@
 package universal;
 
+import java.util.Scanner;
+
 public class Main {
-    public static <T> Node<T> listFromArray(T[] arr, int i) {
-        if (i >= arr.length)
-            return null;
-        return new Node<T>(arr[i], listFromArray(arr, i+1));
-    }
 
     public static void main(String[] args) {
-        Integer[] arr = {1, 6, 3, 5};
-        System.out.println(listFromArray(arr, 0));
+        while (true) {
+            int num1 = new Scanner(System.in).nextInt();
+            int num2 = num1 > 2 ? -6 : -9;
+            System.out.println(num2);
+        }
     }
-
-
 }

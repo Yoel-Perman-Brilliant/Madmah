@@ -8,7 +8,7 @@ public class Ring {
     private String color;
     private double size;
 
-    Ring(String color, double size) {
+    public Ring(String color, double size) {
         this.color = color;
         this.size = size;
     }
@@ -33,13 +33,13 @@ public class Ring {
         return ((Double)size).toString();
     }
 
-    static void game(Stack<Ring> stack) {
+    public static void game(Stack<Ring> stack) {
         String color;
         Ring ring;
         Scanner reader = new Scanner(System.in);
         double size = reader.nextDouble();
         while (size != -999) {
-            color = reader.next();
+            color = "pink";
             ring = new Ring(color, size);
             insertRings(stack, ring);
             size = reader.nextDouble();
@@ -50,11 +50,9 @@ public class Ring {
         Ring temp;
         if (stack.isEmpty()) {
             stack.push(ring);
-            return;
         }
-        if (stack.top().getSize() > ring.getSize()) {
+        else if (stack.top().getSize() < ring.getSize()) {
             stack.push(ring);
-            return;
         }
         else {
             temp = stack.pop();
@@ -67,5 +65,10 @@ public class Ring {
         Stack<Ring> stack = new Stack<>();
         game(stack);
         System.out.println(stack);
+        Stack<Integer> stack1 = new Stack<>();
+        stack1.push(1);
+        stack1.push(5);
+        stack1.push(7);
+        System.out.println(stack1);
     }
 }

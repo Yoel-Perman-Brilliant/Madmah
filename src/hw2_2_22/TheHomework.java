@@ -9,20 +9,18 @@ public class TheHomework {
                 stack.push(temp.pop());
             return 0;
         }
-        if ((stack.top()%2 == 0)) {
+        if ((stack.top() % 2 == 0)) {
             stack.pop();
             return func(stack, temp);
         }
-        else {
-            temp.push(stack.pop());
-            return func(stack, temp) + 1;
-        }
+        temp.push(stack.pop());
+        return func(stack, temp) + 1;
     }
 
     public static void main(String[] args) {
         int[] arr = {1, 6, 8, 3, 5};
         Stack<Integer> stack = new Stack<>();
-        for (int i = 0; i< arr.length; i++) {
+        for (int i = 0; i < arr.length; i++) {
             stack.push(arr[i]);
         }
         System.out.println(func(stack, new Stack<>()));

@@ -5,8 +5,8 @@ This is it really.
 </p>
 
 #Homework
-page 98 exs 43-46
+Page 177
 
-#Current Ex
-
-
+#Current Exersice
+Write a generic function that gets as parameters two Binary Trees, checks if both trees are identical in structure and
+returns an appropriate boolean value.
