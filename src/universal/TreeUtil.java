@@ -24,12 +24,12 @@ public class TreeUtil {
         return !tree.hasLeft() && !tree.hasRight();
     }
 
-    public static <T> int numberOfLeafs(BinNode<T> t) {
+    public static <T> int numberOfLeaves(BinNode<T> t) {
         if (t == null)
             return 0;
         if (isLeaf(t))
             return 1;
-        return numberOfLeafs(t.getLeft()) + numberOfLeafs(t.getRight());
+        return numberOfLeaves(t.getLeft()) + numberOfLeaves(t.getRight());
     }
 
     public static <T> boolean exists(BinNode<T> tree, T value) {
@@ -37,5 +37,4 @@ public class TreeUtil {
             return false;
         return tree.getValue().equals(value) || exists(tree.getLeft(), value) || exists(tree.getRight(), value);
     }
-
 }

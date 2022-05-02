@@ -5,7 +5,7 @@ This is it really.
 </p>
 
 #Homework
-Page 177
+Dora sent an exam, do questions 1,2,3,4
 
 #Current Exersice
 Write a generic function that gets as parameters two Binary Trees, checks if both trees are identical in structure and
